@@ -1,5 +1,7 @@
 This sample project configures maven with surefire to run a zohhak (plus junit) test in parallel mode. This will lead to a nasty NullPointerException...
 
+See (the ticket)[https://github.com/piotrturski/zohhak/issues/14] for more details.
+
 Output of running "mvn clean test":
 
 ```
