@@ -43,7 +43,13 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.19.1</version>
+
+                <!-- from this version on, the bug is fixed (2.19.2-20161202.055334-98) -->
+                <version>2.19.2-SNAPSHOT</version>
+
+                <!-- this version still got the bug -->
+                <!--<version>2.19.1</version>-->
+                
                 <configuration>
                     <!-- enabling parallel tests makes the zohhak test fail! -->
                     <parallel>methods</parallel><!-- happens also with "classes" set -->
@@ -52,4 +58,12 @@
             </plugin>
         </plugins>
     </build>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>apache.snapshots</id>
+            <url>http://repository.apache.org/snapshots/</url>
+        </pluginRepository>
+    </pluginRepositories>
+
 </project>
